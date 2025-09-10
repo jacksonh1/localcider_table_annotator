@@ -1,7 +1,5 @@
 # localcider_table_annotator
 
-directory structure based on CCDS template (https://cookiecutter-data-science.drivendata.org/)
-
 An extremely simple (and crude) wrapper to annotate a table of sequences with localCIDER features.
 
 all credit goes to the localCIDER package (https://pappulab.github.io/localCIDER/, https://github.com/Pappulab/localCIDER) and its authors. This is just a simple wrapper to annotate a table with localCIDER features.
