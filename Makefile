@@ -44,13 +44,6 @@ format:
 #
 
 
-# ## run script in data_processing to generate processed data
-# .PHONY: data
-# data:
-# 	# $(PYTHON_INTERPRETER) data_processing/background_frequencies.py
-# 	# $(PYTHON_INTERPRETER) data_processing/make_count_matrices.py
-
-
 #################################################################################
 # Self Documenting Commands                                                     #
 #################################################################################
@@ -70,25 +63,3 @@ help:
 	@$(PYTHON_INTERPRETER) -c "${PRINT_HELP_PYSCRIPT}" < $(MAKEFILE_LIST)
 
 
-## Lint using flake8 and black (use `make format` to do formatting)
-# .PHONY: lint
-# lint:
-# 	flake8 lir_proteome_screen_pssm
-# 	isort --check --diff --profile black lir_proteome_screen_pssm
-# 	black --check --config pyproject.toml lir_proteome_screen_pssm
-
-
-## Format source code with black
-# .PHONY: format
-# format:
-# 	black --config pyproject.toml lir_proteome_screen_pssm
-#
-
-## run scripts in data_processing to generate processed data
-# .PHONY: data
-# data: requirements
-# 	$(PYTHON_INTERPRETER) data_processing/background_frequencies.py
-# 	# $(PYTHON_INTERPRETER) data_processing/make_count_matrices.py
-# 	$(PYTHON_INTERPRETER) data_processing/lir_central_test_set.py
-# 	$(PYTHON_INTERPRETER) data_processing/lir_central_augmented_test_set.py
-# 	$(PYTHON_INTERPRETER) data_processing/process_tables.py
