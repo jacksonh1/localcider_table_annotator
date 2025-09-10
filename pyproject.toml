@@ -1,0 +1,44 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "localcider_table_annotator"
+version = "0.0.1"
+description = "An extremely simple wrapper to annotate a table of sequences with localCIDER features."
+authors = [
+  { name = "Jackson Halpin" },
+]
+# license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+requires-python = "~=3.10"
+dependencies = [
+    "importlib-resources",
+    "numpy",
+    "python-dotenv",
+    "pandas",
+    "localcider",
+]
+[project.scripts]
+localcider_table_annotator = "localcider_table_annotator.localcider_table_annotator:main"
+
+
+# [tool.flit.sdist]
+# include = [
+#     "lir_proteome_screen_pssm/local_data/*",
+# ]
+
+[tool.black]
+line-length = 99
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+)/
+'''
+
